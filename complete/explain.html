@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&family=Oswald&display=swap" rel="stylesheet">
+    <title>Document</title>
+<style>
+      body{
+ -ms-overflow-style: none;
+ }/*스크롤바 숨기기*/
+ 
+::-webkit-scrollbar {
+  display: none;
+}/*스크롤바 숨기기*/
+
+
+@keyframes rightmove{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(1050px,0);
+    }
+}
+
+.divmenu{
+    width: 250px;
+    height: 550px;
+    font-family: 'Gowun Batang', serif;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    font-size: 30px;
+    
+}
+
+.divvid{
+    width: 870px;
+    height: 437px;
+    background-color: white;
+    position: relative;
+    top: -550px;
+    left: 0px;
+    z-index: -1;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Gowun Batang', serif;
+}
+.divlist{
+    width: 540px;
+    height: 550px;
+    font-family: 'Gowun Batang', serif;
+    position: relative;
+    top: -550px;
+    left: 250px;
+    z-index: 1;
+    
+    overflow: hidden;
+    font-size: 20px;
+}
+.img{
+   background-color: white;
+   position: relative;
+   top: 0px;
+   left: 0px; 
+   
+   }
+.vidpo{
+    position: relative;
+    top: -400px;
+    z-index: 1;
+}
+
+.from{
+    font-size: 15px;
+    
+}
+.score{
+    font-size: 40px;
+    font-family: 'Joan', serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+
+
+
+
+.div1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div1-1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 988px;
+    
+    z-index: 1;
+}
+.div1-2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    font-size: 50px;
+    height: 989px;
+    font-family: 'Anton', sans-serif;
+   border-right: 1px solid gray;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    background-color: white;
+    color: gray;
+    border-bottom: 1px solid gray;
+    font-family: 'Gowun Batang', serif;
+}
+.menu1{
+  background-color: white;
+  color: gray;
+  text-align: center;
+}
+.list1{
+   border-left: 1px solid gray;
+   color: gray;
+   background-color: white;
+   text-align: center;
+   
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check1"]:checked~.div1{
+    left: 870px;
+}
+.pic{
+ float: left;
+ font-size: 26px;
+}
+.scroll{
+    float: right;
+ font-size: 26px;
+ writing-mode: vertical-rl;
+}
+
+
+.div2{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div2-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 988px;
+    
+    z-index: 1;
+}
+.div2-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 989px;
+    font-family: 'Anton', sans-serif;
+   border-right: 1px solid gray;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    background-color: white;
+    color: gray;
+    border-bottom: 1px solid gray;
+    font-family: 'Gowun Batang', serif;
+}
+.menu2{
+  background-color: white;
+  color: gray;
+  text-align: center;
+}
+.list2{
+   border-left: 1px solid gray;
+   color: gray;
+   background-color: white;
+   text-align: center;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check2"]:checked~.div2{
+    left: 790px;
+}
+
+
+</style>
+
+</head>
+<body>
+    
+    <input id="check1" type="checkbox">
+    
+    <div class="div1-2 koreanfont">
+        &nbsp&nbsp앨범 이름면
+    </div>
+    <div class="div1">
+        <label for="check1"><div class="img" style="width:967px; height:988px; border: 1px solid gray; font-size: 40px; color: gray; text-align: center; font-family: 'Gowun Batang', serif;" >
+            <div class="pic">
+             좌측에서 원하는 사람 선택시 해당 앨범 목록면 표시
+            </div>
+            
+            <br><br><br><br><br><br><br>
+            앨범 커버면<br>
+                (커버면 클릭시 앨범 정보면 표시)
+
+
+                <br>
+            <span class="scroll">스크롤시 다음 앨범으로 넘어갑니다</span>    
+        </div></label>
+    </div>
+    <div class="div1-1">
+        <div class="divmenu menu1 " style="font-size: 30px;">
+           <br><br><br><br><br>
+            앨범설명면
+            
+        </div>
+        <div class="divlist list1">
+            <br><br><br><br><br><br><br>
+          수록곡 목록<br>
+          (원하는 노래 제목을 클릭 시 영상면에서 재생)
+        </div>
+        <div class="divvid vid1" style="color: gray;" >
+            <br><br>
+            영상면
+        </div>
+    <div>
+
+
+
+        <input id="check2" type="checkbox">
+    
+    <div class="div2-2 koreanfont">
+        &nbsp&nbsp앨범 이름면
+    </div>
+    <div class="div2">
+        <label for="check2"><div class="img" style="width:967px; height:988px; border: 1px solid gray; font-size: 40px; color: gray; text-align: center; font-family: 'Gowun Batang', serif;" >
+            <div class="pic">
+             좌측에서 원하는 사람 선택시 앨범 목록면 표시
+            </div>
+            
+            <br><br><br><br><br><br><br>
+            앨범 커버면<br>
+                (커버면 클릭시 앨범 정보면 표시)
+        </div></label>
+    </div>
+    <div class="div2-1">
+        <div class="divmenu menu2 " style="font-size: 30px;">
+           <br><br><br><br><br>
+            앨범설명면
+            
+        </div>
+        <div class="divlist list2">
+            <br><br><br><br><br><br><br>
+          수록곡 목록<br>
+          (원하는 노래 제목을 클릭 시 영상면에서 재생)
+        </div>
+        <div class="divvid vid2" style="color: gray;" >
+            <br><br>
+            영상면
+        </div>
+    <div>
+        
+        
+       
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&family=Oswald&display=swap" rel="stylesheet">
+
+<style>
+    
+    body{
+ -ms-overflow-style: none;
+ }/*스크롤바 숨기기*/
+ 
+::-webkit-scrollbar {
+  display: none;
+}/*스크롤바 숨기기*/
+
+
+@keyframes rightmove{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(1050px,0);
+    }
+}
+
+.divmenu{
+    width: 250px;
+    height: 550px;
+    font-family: 'Gowun Batang', serif;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    font-size: 26px;
+}
+.divvid{
+    width: 970px;
+    height: 540px;
+    background-color: black;
+    position: relative;
+    top: -650px;
+    left: -150px;
+    z-index: -1;
+    overflow: hidden;
+}
+.divlist{
+    width: 720px;
+    height: 550px;
+    
+    position: relative;
+    top: -550px;
+    left: 250px;
+    z-index: 1;
+    font-family: 'Oswald', sans-serif;
+
+}
+.img{
+   
+   position: relative;
+   top: 0px;
+   left: 0px; 
+   
+   }
+.vidpo{
+    position: relative;
+    top: -400px;
+    z-index: 1;
+}
+.from{
+    font-size: 15px;
+    
+}
+.score{
+    font-size: 40px;
+    font-family: 'Joan', serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin: 10px
+}
+
+/*Alfie Templeman*/
+.div1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div1-1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div1-2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: #f2936b;
+}
+.menu1{
+ 
+  background-color: #f2936b;
+}
+.list1{
+   background-color: #f2936b;
+   font-size: 30px;
+}
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check1"]:checked~.div1{
+    left: 870px;
+}
+
+
+/*unofficialboyy*/
+.div2{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div2-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div2-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: rgb(24, 23, 23);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: white;
+}
+.menu2{
+
+background-color: white;
+}
+.list2{
+  background-color: white;
+  font-size: 30px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check2"]:checked~.div2{
+    left: 790px;
+}
+
+
+/*wiona oak*/
+.div3{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div3-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div3-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: orangered;
+    
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+.menu3{
+  
+  background-color: orangered
+}
+.list3{
+    background-color: orangered;
+    font-size: 30px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check3"]:checked~.div3{
+    left: 790px;
+}
+
+ 
+ 
+</style>
+</head>
+<body>
+    <!--Alfie Templeman-->
+    <input id="check1" type="checkbox">
+    
+    <div class="div1-2">
+        &nbsp&nbspAlfie Templeman
+    </div>
+    <div class="div1">
+        <label for="check1"><img src="images\other\alfitem.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div1-1">
+        <div class="divmenu menu1">
+
+        </div>
+        <div class="divlist list1">
+            <br>  <br>
+            <a href="https://cafe.naver.com/skyblueefd8s/171" target="vid1" style="color: white;">1.  "Stop Thinking"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/172" target="vid1" style="color: white;">  2.	"Who I Am "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/173" target="vid1" style="color: white;">  3.	"Movies"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/174" target="vid1" style="color: white;">  4.	"Things I Thought Were Mine"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/175" target="vid1" style="color: white;">  5.	"3D Feelings"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/176" target="vid1" style="color: white;">  6.	"Forever Isn't Long Enough"</a><br>
+        </div>
+        <div class="divvid vid1" >
+            <iframe src="" name="vid1" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+       
+    
+
+    <!--unofficialboyy-->
+    <input id="check2" type="checkbox">
+    
+    <div class="div2-2">
+        &nbsp&nbspunofficialboyy
+    </div>
+    <div class="div2">
+        <label for="check2"><img src="images\other\unofficialboyy.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div2-1">
+        <div class="divmenu menu2">
+
+        </div>
+        <div class="divlist list2">
+            <br>  <br>
+            <a href="https://cafe.naver.com/skyblueefd8s/177" target="vid2">1.  "?x3"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/178" target="vid2">  2.	"<span style="font-family: 'Gowun Batang', serif;">나빠"</span></a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/179" target="vid2">  3.<span style="font-family: 'Gowun Batang', serif;;">"잿더미"</span></a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/180" target="vid2">  4.	"bother 2021(feat.gamma)"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/181" target="vid2">  5.	"mmm (Feat. oceanfromtheblue)"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/182" target="vid2">  6.	"flow"</a><br>
+        </div>
+        <div class="divvid vid2" >
+            <iframe src="" name="vid2" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+  
+
+     <!--AURORA-->   
+     <input id="check3" type="checkbox">
+    
+    <div class="div3-2">
+       &nbsp&nbspAURORA
+    </div>
+    <div class="div3">
+        <label for="check3"><img src="images\other\01-Queendom-Option-2 (1).png" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div3-1">
+        <div class="divmenu menu3">
+
+        </div>
+        <div class="divlist list3">
+            <br><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/183" target="vid3" style="color: white;">1.  "A Temporary High"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/184" target="vid3" style="color: white;">  2.	"Conqueror"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/185" target="vid3" style="color: white;">  3.	"The River"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/186" target="vid3" style="color: white;">  4.	"Animal"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/187" target="vid3" style="color: white;">  5.	"You Keep Me Crawling "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/188" target="vid3" style="color: white;">  6.	"Forgotten Love"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/189" target="vid3" style="color: white;">  7.	"Daydreamer"</a><br>
+        </div>
+        <div class="divvid vid3" >
+            <iframe src="" name="vid3" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&family=Oswald&display=swap" rel="stylesheet">
+
+<style>
+  
+    body{
+ -ms-overflow-style: none;
+ }/*스크롤바 숨기기*/
+ 
+::-webkit-scrollbar {
+  display: none;
+}/*스크롤바 숨기기*/
+
+
+@keyframes rightmove{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(1050px,0);
+    }
+}
+
+.divmenu{
+    width: 250px;
+    height: 550px;
+    font-family: 'Gowun Batang', serif;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    font-size: 26px;
+}
+.divvid{
+    width: 970px;
+    height: 540px;
+    background-color: black;
+    position: relative;
+    top: -650px;
+    left: -150px;
+    z-index: -1;
+    overflow: hidden;
+}
+.divlist{
+    width: 720px;
+    height: 550px;
+    font-family: 'Gowun Batang', serif;
+    position: relative;
+    top: -550px;
+    left: 250px;
+    z-index: 1;
+    font-family: 'Oswald', sans-serif;
+
+}
+.img{
+   
+   position: relative;
+   top: 0px;
+   left: 0px; 
+   
+   }
+.vidpo{
+    position: relative;
+    top: -400px;
+    z-index: 1;
+}
+.from{
+    font-size: 15px;
+    
+}
+.score{
+    font-size: 40px;
+    font-family: 'Joan', serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin: 10px
+}
+
+/*When I Was Young EP*/
+.div1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div1-1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div1-2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: rgb(194, 28, 28);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: white
+}
+.menu1{
+  color: rgb(194, 28, 28);;
+  background-color: white;
+}
+.list1{
+  background-color: rgb(194, 28, 28);
+  font-size: 30px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check1"]:checked~.div1{
+    left: 870px;
+}
+
+
+/*Motordrome*/
+.div2{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div2-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div2-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: rgb(24, 23, 23);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: skyblue
+}
+.menu2{
+    background-color:white;
+    color: rgb(24, 23, 23);
+
+} 
+
+
+.list2{
+  color: skyblue;
+  background-color:rgb(24, 23, 23) ;
+  font-size: 30px;
+  
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check2"]:checked~.div2{
+    left: 790px;
+}
+
+
+/*Forever Neverland*/
+.div3{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div3-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div3-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: #4e28b6;
+    border-right: 1px solid gray;
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+.menu3{
+   background-color: white;
+   color: #4e28b6;
+}
+.list3{
+    background-color: #4e28b6;
+    font-size: 26px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check3"]:checked~.div3{
+    left: 790px;
+}
+
+ 
+ /*No Mythologies to Follow*/
+ .div4{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div4-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div4-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: gray;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: white;
+    
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+.menu4{
+  color: gray;
+  background-color: white;
+}
+.list4{
+   background-color: gray;
+   font-size: 20px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check4"]:checked~.div4{
+    left: 790px;
+}
+
+
+/*Bikini Daze EP*/
+.div5{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div5-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div5-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: rgb(206, 206, 25);;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: gray;
+    
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+.menu5{
+  background-color: white;
+  color: rgb(206, 206, 25);;
+}
+.list5{
+  background-color: rgb(206, 206, 25);;
+  color: gray;
+  font-size: 35px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check5"]:checked~.div5{
+    left: 790px;
+}
+
+
+/*그외 싱글곡*/
+.div6{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div6-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div6-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: white;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: #f04e0e;
+    
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+.menu6{
+    background-color: #f04e0e;
+
+}
+.list6{
+  background-color: #f04e0e;
+  font-size: 25px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check6"]:checked~.div6{
+    left: 790px;
+}
+
+</style>
+</head>
+<body>
+    <!--When I Was Young EP-->
+    <input id="check1" type="checkbox">
+    
+    <div class="div1-2">
+        &nbsp&nbspWhen I Was Young EP
+    </div>
+    <div class="div1">
+        <label for="check1"><img src="images\mo\wheniwasyoung.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div1-1">
+        <div class="divmenu menu1">
+            <br><br><br>
+            &nbsp출시일:	2017/10/26
+            <br>
+            &nbsp장르:팝
+            <br>
+            &nbsp길이:	20:07
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:85/100
+            <br>
+            &nbsp유저점수:72/100
+            <br>
+            
+            <br>
+            <br>
+            
+           <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list1">
+            <br> <br> <br>
+            <a href="https://cafe.naver.com/skyblueefd8s/77" target="vid1" style=" color: white; ">1.  "Roots"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/78" target="vid1" style=" color: white; ">  2.	"When I Was Young "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/79" target="vid1" style=" color: white; ">  3.	"Turn My Heart to Stone"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/80" target="vid1" style=" color: white; ">  4.	"Linking With You"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/81" target="vid1" style=" color: white; ">  5.	"Bb"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/82" target="vid1" style=" color: white; ">  6.	"Run Away"</a>
+        </div>
+        <div class="divvid vid1" >
+            <iframe src="" name="vid1" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+       
+    
+
+    <!--Motordrome-->
+    <input id="check2" type="checkbox">
+    
+    <div class="div2-2">
+        &nbsp&nbspMotordrome
+    </div>
+    <div class="div2">
+        <label for="check2"><img src="images\mo\motordrome.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div2-1">
+        <div class="divmenu menu2">
+            <br><br><br>
+            &nbsp출시일:	2022/01/28
+            <br>
+            &nbsp장르:팝
+            <br>
+            &nbsp길이:	32:03
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:70/100
+            <br>
+            &nbsp유저점수:64/100
+            <br>
+            
+            <br>
+            <br>
+            <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list2">
+            <br>
+            <a href="https://cafe.naver.com/skyblueefd8s/83" target="vid2" style=" color: skyblue; ">1.  "Kindness"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/84" target="vid2" style=" color: skyblue; ">  2.	"Live to Survive "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/85" target="vid2" style=" color: skyblue; ">  3.	"Wheelspin"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/86" target="vid2" style=" color: skyblue; ">  4.	"Cool to Cry"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/87" target="vid2" style=" color: skyblue; ">  5.	"Youth Is Lost"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/88" target="vid2" style=" color: skyblue; "> 6.	"New Moon "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/89" target="vid2" style=" color: skyblue; ">   7.	"Brad Pitt "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/90" target="vid2" style=" color: skyblue; ">   8.	"Goosebumps "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/91" target="vid2" style=" color: skyblue; ">9.	"Hip Bones"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/92" target="vid2" style=" color: skyblue; ">10.	"Punches"</a>
+        </div>
+        <div class="divvid vid2" >
+            <iframe src="" name="vid2" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+  
+
+     <!--Forever Neverland-->   
+     <input id="check3" type="checkbox">
+    
+    <div class="div3-2">
+       &nbsp&nbspForever Neverland
+    </div>
+    <div class="div3">
+        <label for="check3"><img src="images\mo\foeverneverland.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div3-1">
+        <div class="divmenu menu3">
+            <br><br><br>
+            &nbsp출시일:2018/10/19
+            <br>
+            &nbsp장르:팝
+            <br>
+            &nbsp길이:44:49
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:72/100
+            <br>
+            &nbsp유저점수:68/100
+            <br>
+            
+            <br>
+            <br>
+            <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list3">
+            <a href="https://cafe.naver.com/skyblueefd8s/93" target="vid3" style=" color: white; " >1.  "Intro "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/94" target="vid3" style=" color: white; " >  2.	"Way Down"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/95" target="vid3" style=" color: white; " >  3.	"I Want You"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/96" target="vid3" style=" color: white; " >  4.	"Blur (feat. Foster The People) "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/97" target="vid3" style=" color: white; " >  5.	"Nostalgia"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/98" target="vid3" style=" color: white; " >  6.	"Sun In Our Eyes"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/99" target="vid3" style=" color: white; " >   7.	"Mercy"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/100" target="vid3" style=" color: white; " >   8.	"If It's Over"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/101" target="vid3" style=" color: white; " >9.	"West Hollywood "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/102" target="vid3" style=" color: white; " >10.	"Beautiful Wreck"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/103" target="vid3" style=" color: white; " > 11.	"Red Wine ft. Empress Of"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/104" target="vid3" style=" color: white; " >  12.	"Imaginary Friend"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/105" target="vid3" style=" color: white; " >  13.	"Trying to Be Good"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/106" target="vid3" style=" color: white; " > 14.	" Purple Like the Summer Rain"</a>
+            
+          
+
+        </div>
+        <div class="divvid vid3" >
+            <iframe src="" name="vid3" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+
+     <!--No Mythologies to Follow-->       
+     <input id="check4" type="checkbox">
+    
+    <div class="div4-2 ">
+       &nbsp&nbspNo Mythologies to Follow (Deluxe)
+    </div>
+    <div class="div4">
+        <label for="check4"><img src="images\mo\nomytholigies.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div4-1">
+        <div class="divmenu menu4">
+            <br><br><br>
+            &nbsp출시일:2014/04/21
+            <br>
+            &nbsp장르:팝
+            <br>
+            &nbsp길이:1:22:21
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:73/100
+            <br>
+            &nbsp유저점수:77/100
+            <br>
+            
+            <br>
+            <br>
+            <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list4">
+            <a href="https://cafe.naver.com/skyblueefd8s/107" target="vid4" style="color: white;" >1.  "Fire Rides"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/108" target="vid4" style="color: white;">  2.	"Maiden"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/109" target="vid4" style="color: white;">  3.	"Never Wanna know "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/110" target="vid4" style="color: white;">  4.	"Red in the Grey"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/111" target="vid4" style="color: white;">  5.	"Pilgrim"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/112" target="vid4" style="color: white;">  6.	"Don't Wanna Dance"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/113" target="vid4" style="color: white;">   7.	"Waste of Time"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/114" target="vid4" style="color: white;">   8.	"Dust is Gone"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/115" target="vid4" style="color: white;">9.	" XXX 88 ft. Diplo"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/116" target="vid4" style="color: white;">10.	"Walk This Way "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/117" target="vid4" style="color: white;">   11.	"Slow Love "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/118" target="vid4" style="color: white;">  12.	"Glass "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/119" target="vid4" style="color: white;">  13.	"No Mythologies to Follow"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/120" target="vid4" style="color: white;"> 14.	"Dummy Head"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/121" target="vid4" style="color: white;">15.  "The Sea"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/122" target="vid4" style="color: white;">  16.	"Gone and Found"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/123" target="vid4" style="color: white;">  22.	"Say You'll Be There(Cover)"</a>
+           <br>
+            <span style="font-size: 15px; font-family: 'Gowun Batang', serif;">*17~21번 트랙인 night version과 remix는 포함하지 않았습니다</span>
+        </div>
+        <div class="divvid vid4" >
+            <iframe src="" name="vid4" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+
+        <!--Bikini Daze EP-->
+        <input id="check5" type="checkbox">
+    
+    <div class="div5-2 ">
+       &nbsp&nbspBikini Daze EP
+    </div>
+    <div class="div5">
+        <label for="check5"><img src="images\mo\b999771ba9e11773ec8ea66a589e1fcf7d854e5e_s2_n1.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div5-1">
+        <div class="divmenu menu5">
+            <br><br><br>
+            &nbsp출시일:2013.10.21
+            <br>
+            &nbsp장르:팝
+            <br>
+            &nbsp길이:15:26
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:81/100
+            <br>
+            &nbsp유저점수:74/100
+            <br>
+            
+            <br>
+            <br>
+            <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list5">
+            <br> <br> <br>
+            <a href="https://cafe.naver.com/skyblueefd8s/124" target="vid5" style="color: gray;">1.  "XXX 88 ft. Diplo"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/125" target="vid5" style="color: gray;">  2.	"Never Wanna know"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/126" target="vid5" style="color: gray;">  3.	"dark night"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/127" target="vid5" style="color: gray;">  4.	"Freedom (#1)"</a><br>
+        </div>
+        <div class="divvid vid5" >
+            <iframe src="" name="vid5" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+    
+        <!--그외 싱글곡-->
+        <input id="check6" type="checkbox">
+    
+        <div class="div6-2 koreanfont">
+           &nbsp&nbsp그외 싱글곡
+        </div>
+        <div class="div6">
+            <label for="check6"><img src="images\mo\night with you.jpg" width="970px" height="990px" class="img"></label>
+        </div>
+        <div class="div6-1">
+            <div class="divmenu menu6">
+    
+            </div>
+            <div class="divlist list6">
+                <br><br>
+                <a href="https://cafe.naver.com/skyblueefd8s/128" target="vid6" style="color: white;">1.  "Bullet with Butterfly Wings"</a><br>
+                <a href="https://cafe.naver.com/skyblueefd8s/129" target="vid6" style="color: white;">  2.	"On & On"</a><br>
+                <a href="https://cafe.naver.com/skyblueefd8s/130" target="vid6" style="color: white;">  3.	"Theme Song (I'm Far Away)"</a><br>
+                
+                <a href="https://cafe.naver.com/skyblueefd8s/132" target="vid6" style="color: white;">  4.	"Never Fall In Love(with Jack Antonoff)s"</a><br>
+                <a href="https://cafe.naver.com/skyblueefd8s/133" target="vid6" style="color: white;">  5.	"Don't Leave(with Snakehips)"</a><br>
+                <a href="https://cafe.naver.com/skyblueefd8s/134" target="vid6" style="color: white;">   6.	"Drum"</a><br>
+                <a href="https://cafe.naver.com/skyblueefd8s/135" target="vid6" style="color: white;">   7.	"Final Song"</a><br>
+                <a href="https://cafe.naver.com/skyblueefd8s/136" target="vid6" style="color: white;">8.	"New Year's Eve"</a><br>
+                <a href="https://cafe.naver.com/skyblueefd8s/137" target="vid6" style="color: white;">9.	"Nights With You"</a><br>
+                <a href="https://cafe.naver.com/skyblueefd8s/138" target="vid6" style="color: white;">   10.	"Kamikaze"</a><br>
+            </div>
+            <div class="divvid vid6" >
+                <iframe src="" name="vid6" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+            </div>
+        <div>
+
+</body>
+</html>

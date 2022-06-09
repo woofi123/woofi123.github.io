@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&family=Oswald&display=swap" rel="stylesheet">
+
+<style>
+   
+    body{
+ -ms-overflow-style: none;
+ }/*스크롤바 숨기기*/
+ 
+::-webkit-scrollbar {
+  display: none;
+}/*스크롤바 숨기기*/
+
+
+@keyframes rightmove{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(1050px,0);
+    }
+}
+
+.divmenu{
+    width: 250px;
+    height: 550px;
+    font-family: 'Gowun Batang', serif;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    font-size: 26px;
+}
+.divvid{
+    width: 970px;
+    height: 540px;
+    background-color: black;
+    position: relative;
+    top: -650px;
+    left: -150px;
+    z-index: -1;
+    overflow: hidden;
+}
+.divlist{
+    width: 720px;
+    height: 550px;
+   
+    position: relative;
+    top: -550px;
+    left: 250px;
+    z-index: 1;
+    font-family: 'Oswald', sans-serif;
+
+}
+.img{
+   
+   position: relative;
+   top: 0px;
+   left: 0px; 
+   
+   }
+.vidpo{
+    position: relative;
+    top: -400px;
+    z-index: 1;
+}
+.from{
+    font-size: 15px;
+    
+}
+.score{
+    font-size: 40px;
+    font-family: 'Joan', serif;
+}
+a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+}
+
+
+/*You Can’t Kill Me*/
+.div1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div1-1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div1-2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: #9e1e24;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+}
+.menu1{
+ background-color: white;
+ color:#9e1e24 ;
+}
+.list1{
+    background-color: #9e1e24;
+    color: black;
+    font-size: 25px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check1"]:checked~.div1{
+    left: 870px;
+}
+
+
+/*Modus Vivendi*/
+.div2{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div2-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div2-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: #f1642c;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: white;
+}
+.menu2{
+  background: white;
+  color: #f1642c;
+}
+.list2{
+    background-color: #f1642c;
+    color: white;
+    font-size: 25px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check2"]:checked~.div2{
+    left: 790px;
+}
+
+
+/*Glitter ep*/
+.div3{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div3-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div3-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: #d94aad;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: #753d8f;
+    
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+.menu3{
+   color: #d94aad;
+   background-color: white;
+}
+.list3{
+    background-color: #d94aad;
+    color: #753d8f;
+    font-size: 30px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check3"]:checked~.div3{
+    left: 790px;
+}
+
+ 
+ /*그외 싱글곡*/
+ .div4{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div4-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div4-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: #82b2fa;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: black;
+    
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+.menu4{
+    background-color: #98bffa;
+ 
+}
+.list4{
+   color: black;
+    background-color: #98bffa;
+    font-size: 27px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check4"]:checked~.div4{
+    left: 790px;
+}
+</style>
+</head>
+<body>
+    <!--You Can’t Kill Me-->
+    <input id="check1" type="checkbox">
+    
+    <div class="div1-2">
+        &nbsp&nbspYou Can’t Kill ME
+    </div>
+    <div class="div1">
+        <label for="check1"><img src="images\070shake\youcantkillme.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div1-1">
+        <div class="divmenu menu1">
+            <br><br><br>
+            &nbsp출시일:	2022/06/03
+            <br>
+            &nbsp장르:R&B,팝
+            <br>
+            &nbsp길이:48:46
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:80/100
+            <br>
+            &nbsp유저점수:74/100
+            <br>
+            <br>
+            <br>
+            
+           <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list1">
+            <a href="https://cafe.naver.com/skyblueefd8s/30" target="vid1" >1.  "Web"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/31" target="vid1">  2.	"Invited"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/32" target="vid1">  3.	"History"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/33" target="vid1">  4.	"Medicine"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/34" target="vid1">  5.	"Skin and Bones"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/35" target="vid1">  6.	"Blue Velvet"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/36" target="vid1">   7.	"Cocoon"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/37" target="vid1">   8.	"Body"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/38" target="vid1">9.	"Wine & Spirits"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/39" target="vid1">10.	"Come Back Home"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/40" target="vid1">   11.	"Vibrations"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/41" target="vid1">  12.	"Purple Walls"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/42" target="vid1">  13.	"Stay"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/43" target="vid1"> 14.	"Se Fue La Luz"</a>
+        </div>
+        <div class="divvid vid1" >
+            <iframe src="" name="vid1" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+       
+    
+
+    <!--Modus Vivendi-->
+    <input id="check2" type="checkbox">
+    
+    <div class="div2-2">
+        &nbsp&nbspModus Vivendi
+    </div>
+    <div class="div2">
+        <label for="check2"><img src="images\070shake\Modus Vivendi.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div2-1">
+        <div class="divmenu menu2">
+            <br><br><br>
+            &nbsp출시일:2020/01/17
+            <br>
+            &nbsp장르:R&B,팝랩
+            <br>
+            &nbsp길이:44:09
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp 비평가점수:76/100
+            <br>
+            &nbsp유저점수:71/100
+            <br>
+            
+            <br>
+            <br>
+            
+           <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list2">
+            <a href="https://cafe.naver.com/skyblueefd8s/44" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">1.  "Don't Break The Silence"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/45" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">  2.	"Come Around"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/46" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">  3.	"Morrow"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/47" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">  4.	"The Pines"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/48" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">  5.	"Guilty Conscience"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/49" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">  6.	"Divorce"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/50" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">   7.	"It's Forever "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/51" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">   8.	"Rocketship "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/52" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">9.	"Microdosing"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/53" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">10.	"Nice To Have"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/54" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">   11.	"Under The Moon"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/55" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">  12.	"Daydreamin"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/56" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;">  13.	"Terminal B"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/57" target="vid2" style=" color: white; font-size: 25px; margin-left: 10px;"> 14.	"Flight319 "</a>
+        </div>
+        <div class="divvid vid2" >
+            <iframe src="" name="vid2" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+  
+
+     <!--Glitter ep-->   
+     <input id="check3" type="checkbox">
+    
+    <div class="div3-2">
+       &nbsp&nbspGlitter EP
+    </div>
+    <div class="div3">
+        <label for="check3"><img src="images\070shake\glitter.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div3-1">
+        <div class="divmenu menu3">
+            <br><br><br>
+            &nbsp출시일:	2018/03/23
+            <br>
+            &nbsp장르:팝랩
+            <br>
+            &nbsp길이:22:34
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:없음
+            <br>
+            &nbsp유저점수:65/100
+            <br>
+             <br>
+            <br>
+           <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list3">
+            <br>
+            <br>
+            <a href="https://cafe.naver.com/skyblueefd8s/58" target="vid3" style="color: #753d8f;">1.  "I Laugh When I'm With Friends But Sad When <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspI'm Alone"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/59" target="vid3" style="color: #753d8f;">  2.	"Somebody Like Me (feat. 070Phi)"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/60" target="vid3" style="color: #753d8f;">  3.	"Lost In Love"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/61" target="vid3" style="color: #753d8f;">  4.	"Mirrors"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/62" target="vid3" style="color: #753d8f;">  5.	"Stranger "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/63" target="vid3" style="color: #753d8f;">  6.	"Glitter"</a>
+        </div>
+        <div class="divvid vid3" >
+            <iframe src="" name="vid3" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+
+     <!--그외 싱글곡-->       
+     <input id="check4" type="checkbox">
+    
+    <div class="div4-2 koreanfont">
+       &nbsp&nbsp그외 싱글곡
+    </div>
+    <div class="div4">
+        <label for="check4"><img src="images\070shake\neoserf.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div4-1">
+        <div class="divmenu menu4">
+
+        </div>
+        <div class="divlist list4">
+            
+            <a href="https://cafe.naver.com/skyblueefd8s/64" target="vid4" >1.  "Perfect Weapon "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/65" target="vid4">  2.	"Lose My Cool"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/66" target="vid4">  3.	"Neo Surf"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/67" target="vid4">  4.	"SCAR"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/68" target="vid4">  5.	"Accusations"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/69" target="vid4">  6.	"Trust Nobody"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/70" target="vid4" >7.  "rewind"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/71" target="vid4">  8.	" Said"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/72" target="vid4">  9.	"Be myself"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/73" target="vid4">  10.	"Honey"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/74" target="vid4">  11.	"Dem Dead"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/75" target="vid4">  12.	"Bass for thoughts"</a><br>
+         <a href="https://cafe.naver.com/skyblueefd8s/76" target="vid4">   13.	" Sunday night"</a><br>
+        </div>
+        <div class="divvid vid4" >
+            <iframe src="" name="vid4" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+</body>
+</html>

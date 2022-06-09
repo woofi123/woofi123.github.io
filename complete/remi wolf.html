@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&family=Oswald&display=swap" rel="stylesheet">
+
+<style>
+   
+    body{
+ -ms-overflow-style: none;
+ }/*스크롤바 숨기기*/
+ 
+::-webkit-scrollbar {
+  display: none;
+}/*스크롤바 숨기기*/
+
+
+@keyframes rightmove{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(1050px,0);
+    }
+}
+
+.divmenu{
+    width: 250px;
+    height: 550px;
+    font-family: 'Gowun Batang', serif;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    font-size: 26px;
+}
+.divvid{
+    width: 970px;
+    height: 540px;
+    background-color: black;
+    position: relative;
+    top: -650px;
+    left: -150px;
+    z-index: -1;
+    overflow: hidden;
+}
+.divlist{
+    width: 720px;
+    height: 550px;
+    
+    position: relative;
+    top: -550px;
+    left: 250px;
+    z-index: 1;
+    font-family: 'Oswald', sans-serif;
+
+}
+.img{
+   
+   position: relative;
+   top: 0px;
+   left: 0px; 
+   
+   }
+.vidpo{
+    position: relative;
+    top: -400px;
+    z-index: 1;
+}
+.from{
+    font-size: 15px;
+    
+}
+.score{
+    font-size: 40px;
+    font-family: 'Joan', serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    margin: 10px
+}
+
+/*Juno*/
+.div1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div1-1{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div1-2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: blue;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: yellow;
+}
+.menu1{
+  color: blue;
+  background-color: white;
+}
+.list1{
+   background-color: blue;
+   color: yellow;
+   font-size: 25px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check1"]:checked~.div1{
+    left: 870px;
+}
+
+
+/*I'm Allergic To Dogs!*/
+.div2{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div2-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div2-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: skyblue;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: white;
+}
+.menu2{
+  color: skyblue;
+  background-color: white;
+}
+.list2{
+  background-color: skyblue;
+  font-size: 30px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check2"]:checked~.div2{
+    left: 790px;
+}
+
+
+/*You're A Dog!*/
+.div3{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div3-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div3-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: #9772FB;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: white;
+    
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+.menu3{
+   background-color: white;
+   color: #9772FB;
+}
+.list3{
+   background-color: #9772FB;
+  font-size: 30px;
+}
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check3"]:checked~.div3{
+    left: 790px;
+}
+
+ 
+ /*그외 싱글곡*/
+ .div4{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    z-index: 3;
+    transition: all 2s;
+   
+}
+.div4-1{
+    position: absolute;
+    top: 990px;
+    left: 0px;
+    width: 970px;
+    height: 990px;
+    
+    z-index: 1;
+}
+.div4-2{
+    position: absolute;
+    top: 990px;
+    left: -80px;
+    width: 80px;
+    font-size: 50px;
+    height: 990px;
+    font-family: 'Anton', sans-serif;
+    background-color: black;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 3;
+    color: rgb(199, 91, 52);
+    
+}
+.koreanfont{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+}
+.menu4{
+  background-color: rgb(199, 91, 52);
+}
+.list4{
+   background-color: rgb(199, 91, 52);
+   font-size: 25px;
+}
+
+
+input[type=checkbox] {
+    display:none;
+    
+}
+input[id="check4"]:checked~.div4{
+    left: 790px;
+}
+</style>
+</head>
+<body>
+    <!--Juno-->
+    <input id="check1" type="checkbox">
+    
+    <div class="div1-2">
+        &nbsp&nbspJuno
+    </div>
+    <div class="div1">
+        <label for="check1"><img src="images\remiwolf\juno.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div1-1">
+        <div class="divmenu menu1">
+            <br><br><br>
+            &nbsp출시일:	2021/10/15
+            <br>
+            &nbsp장르:팝,펑크
+            <br>
+            &nbsp길이:	39:40
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:82/100
+            <br>
+            &nbsp유저점수:76/100
+            <br>
+            
+            <br>
+            <br>
+            <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list1">
+            <br>
+            <a href="https://cafe.naver.com/skyblueefd8s/139" target="vid1" style="color: yellow;">1.  "Liquor Store"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/140" target="vid1" style="color: yellow;">  2.	"Anthony Kiedis"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/141" target="vid1" style="color: yellow;">  3.	" wyd"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/142" target="vid1" style="color: yellow;">  4.	" Guerrilla"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/143" target="vid1" style="color: yellow;">  5.	"Quiet On Set"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/144" target="vid1" style="color: yellow;">  6.	"Volkiano "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/145" target="vid1" style="color: yellow;">   7.	"Front Tooth"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/146" target="vid1" style="color: yellow;">   8.	" Grumpy Old Man"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/147" target="vid1" style="color: yellow;">9.	"Buttermilk"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/148" target="vid1" style="color: yellow;">10.	"Sally"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/149" target="vid1" style="color: yellow;">   11.	"Sexy Villain"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/150" target="vid1" style="color: yellow;">  12.	"Buzz Me In"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/151" target="vid1" style="color: yellow;">  13.	"Street You Live On"</a><br>
+        </div>
+        <div class="divvid vid1" >
+            <iframe src="" name="vid1" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+       
+    
+
+    <!--I'm Allergic To Dogs!-->
+    <input id="check2" type="checkbox">
+    
+    <div class="div2-2">
+        &nbsp&nbspI'm Allergic To Dogs! EP
+    </div>
+    <div class="div2">
+        <label for="check2"><img src="images\remiwolf\im allergic.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div2-1">
+        <div class="divmenu menu2">
+            <br><br><br>
+            &nbsp출시일:	2020/06/24
+            <br>
+            &nbsp장르:팝,R&B
+            <br>
+            &nbsp길이:		16:39
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:78/100
+            <br>
+            &nbsp유저점수:77/100
+            <br>
+            
+            <br>
+            <br>
+            <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list2">
+            <br><br><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/152" target="vid2" style="color: white;">1.  "Down the Line"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/153" target="vid2" style="color: white;">  2.	" Woo! "</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/154" target="vid2" style="color: white;">  3.	"Hello Hello Hello"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/155" target="vid2" style="color: white;">  4.	"Photo ID"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/156" target="vid2" style="color: white;">  5.	"Disco Man"</a><br>
+        </div>
+        <div class="divvid vid2" >
+            <iframe src="" name="vid2" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+  
+
+     <!--You're A Dog!-->   
+     <input id="check3" type="checkbox">
+    
+    <div class="div3-2">
+       &nbsp&nbspYou're A Dog! EP
+    </div>
+    <div class="div3">
+        <label for="check3"><img src="images\remiwolf\yor're dog.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div3-1">
+        <div class="divmenu menu3">
+            <br><br><br>
+            &nbsp출시일:2019.09.20
+            <br>
+            &nbsp장르:팝,R&B
+            <br>
+            &nbsp길이:	18:00
+            <br>
+            <br>
+            <span class="score">&nbspscores</span>
+            <br>
+            &nbsp비평가점수:없음
+            <br>
+            &nbsp유저점수:69/100
+            <br>
+            
+            <br>
+            <br>
+            <span class="from">&nbsp*점수는 웹사이트"aoty"를 기반으로 작성되었습니다</span>
+        </div>
+        <div class="divlist list3">
+            <br><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/157" target="vid3" style="color: white;">1.  "Sauce"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/158" target="vid3" style="color: white;">  2.	"Rufufus"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/159" target="vid3" style="color: white;">  3.	"Doctor"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/160" target="vid3" style="color: white;">  4.	"Guy"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/161" target="vid3" style="color: white;">  5.	"Thicc"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/162" target="vid3" style="color: white;">  6.	"Shawty"</a>
+        </div>
+        <div class="divvid vid3" >
+            <iframe src="" name="vid3" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+
+
+     <!--그외 싱글곡-->       
+     <input id="check4" type="checkbox">
+    
+    <div class="div4-2 koreanfont">
+       &nbsp&nbsp그외 싱글곡
+    </div>
+    <div class="div4">
+        <label for="check4"><img src="images\remiwolf\cheesin'.jpg" width="970px" height="990px" class="img"></label>
+    </div>
+    <div class="div4-1">
+        <div class="divmenu menu4">
+
+        </div>
+        <div class="divlist list4">
+            <br>
+            <a href="https://cafe.naver.com/skyblueefd8s/163" target="vid4" >1.  "Pool(with Still Woozy)"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/164" target="vid4">  2.	"Monte Carlo"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/165" target="vid4">  3.	"Liz"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/166" target="vid4">  4.	"Cheesin' (with Cautious Clay, Remi Wolf, Still Woozy, <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSophie Meiers, Claud, Melanie Faye & HXNS)'"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/167" target="vid4">  5.	"Sugar"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/168" target="vid4">  6.	"Fired"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/169" target="vid4">   7.	"Michael"</a><br>
+            <a href="https://cafe.naver.com/skyblueefd8s/170" target="vid4">   8.	"Cake"</a>
+        </div>
+        <div class="divvid vid4" >
+            <iframe src="" name="vid4" width="3000px" height="3000px" framebordr="1" class="vidpo"></iframe>
+        </div>
+    <div>
+</body>
+</html>
